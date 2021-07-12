@@ -1,0 +1,58 @@
+Given a string S, and two numbers N, M - arrange the characters of string in between the indexes N and M (both inclusive) in descending order. (Indexing starts from 0).
+
+Input Format:
+First line contains T - number of test cases.
+Next T lines contains a string(S) and two numbers(N, M) separated by spaces.
+
+Output Format:
+Print the modified string for each test case in new line.
+
+SAMPLE INPUT 
+3
+hlleo 1 3
+ooneefspd 0 8
+effort 1 4
+
+SAMPLE OUTPUT 
+hlleo
+spoonfeed
+erofft
+
+CODE:
+
+#include <stdio.h>
+
+int main(){
+	int t,n,m;
+	char s[10],temp;
+	scanf("%d", &t);             // Reading input from STDIN i.e, testcases
+	//printf("Input number is %d.\n", num);  
+	// Writing output to STDOUT
+    
+	//loop for the no. of test cases
+	for(int k=1;k<=t;k++){	
+
+    //Reading input as string , starting index, end index for sorting bw these indexex
+    	scanf("%s",&s);
+	    scanf("%d",&n);
+	    scanf("%d",&m);
+	//printf("%s %d",s,n);
+	    //loop for kth testcase string
+	    for(int i=n;i<m;i++){
+
+			//perform sorting
+           for(int j=i+1;j<=m;j++){
+			   
+		      if(s[i]<s[j]){
+			   temp=s[i];
+			   s[i]=s[j];
+			   s[j]=temp;
+		       }
+	        }
+	    }
+		//output string
+	    printf("%s\n",s);
+	}
+	return 0;
+		 
+}
