@@ -1,3 +1,4 @@
+//Sorting String characters 
 Given a string S, and two numbers N, M - arrange the characters of string in between the indexes N and M (both inclusive) in descending order. (Indexing starts from 0).
 
 Input Format:
