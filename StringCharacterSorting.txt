@@ -22,7 +22,8 @@ CODE:
 
 #include <stdio.h>
 
-int main(){
+int main()
+{
 	int t,n,m;
 	char s[10],temp;
 	scanf("%d", &t);             // Reading input from STDIN i.e, testcases
